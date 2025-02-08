@@ -26,12 +26,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm install --legacy-peer-deps && react-scripts build",
+    "build": "react-scripts build",
+    "vercel-build": "CI=false NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "homepage": "https://Nandubs.github.io/My-Portfolio"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,5 +53,9 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  }
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "homepage": "https://Nandubs.github.io/My-Portfolio"
 }
